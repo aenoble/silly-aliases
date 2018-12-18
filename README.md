@@ -16,3 +16,14 @@ having a local network outage.
 ```bash
 alias nettest="ping -a 8.8.8.8"
 ```
+
+## let_me_in
+Delete a line from your ~/.ssh/known_hosts file when you get yelled at.
+Must pass in an argument.
+```
+let_me_in () {
+  sed -i -e '$1d' ~/.ssh/known_hosts
+}
+```
+
+*Usage:* `let_me_in 102`
