@@ -27,3 +27,9 @@ let_me_in () {
 ```
 
 *Usage:* `let_me_in 102`
+
+## docker_ips
+Lists local ips of running docker containers.
+```
+docker ps | awk '{print $1}' | tail -n +2 | xargs docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}'
+```
