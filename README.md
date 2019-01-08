@@ -33,3 +33,9 @@ Lists local ips of running docker containers.
 ```
 docker ps | awk '{print $1}' | tail -n +2 | xargs docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}'
 ```
+
+## shrug
+Copies the shrug guy thing into my clipboard.
+```
+shrug() { echo "¯\_(ツ)_/¯" | pbcopy }
+```
