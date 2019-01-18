@@ -39,3 +39,9 @@ Copies the shrug guy thing into my clipboard.
 ```
 shrug() { echo "¯\_(ツ)_/¯" | pbcopy }
 ```
+
+## longfiles
+Lists line counts of files in ascending order
+```
+find . -name '*' | xargs wc -l | sort -n
+```
